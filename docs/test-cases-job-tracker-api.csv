@@ -1,0 +1,22 @@
+test_case_id,title,feature,priority,endpoint,preconditions,steps,expected_result,automation_status
+TC-001,Verify public status endpoint returns app status,Public API,High,/api/v1/public/status,The app needs to be running,Send a GET request to /api/v1/public/demo-stats,"Response should be 200 and response body includes app information
+Example:{
+  ""app_name"": ""SuperSQA Job Tracker"",
+  ""api_version"": ""v1"",
+  ""environment"": ""local"",
+  ""server_time"": ""2026-09-28T14:33:38.675526Z""
+}",PENDING
+TC-002,Verify public demo status endpoint returns demo status,Public API,Medium,/api/v1/public/demo-stats,The app needs to be running,Send a GET request to /api/v1/public/status,"Response should be 200 and response body is correct structure.
+Example:{
+  ""total_seeded_applications"": 4,
+  ""status_counts"": {
+    ""potential"": 2,
+    ""applied"": 1,
+    ""in_progress"": 1,
+    ""final_stage"": 0,
+    ""hired"": 0,
+    ""rejected"": 0,
+    ""withdrawn"": 0,
+    ""total"": 4
+  }
+}",PENDING
