@@ -1,5 +1,6 @@
 
 import requests
+from configs.settings import BASE_URL
 
 
 def test_verify_public_status_endpoint():
@@ -17,7 +18,7 @@ def test_verify_public_status_endpoint():
     
     
     # make the call
-    url="http://localhost:3050/api/v1/public/status"
+    url=f"{BASE_URL}/api/v1/public/status"
     response=requests.get(url)
     
     
